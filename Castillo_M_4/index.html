@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "contenedor">
+        <div id = "menu" class = "empezar">
+            <div class = "titulo">Bienvenidos a el otro vuelo</div>
+            <button type = "button" class = "jugar">PLAY</button>
+            <button type = "button" class = "instrucciones">INSTRUCCIONES</button>
+        </div>
+        <div id = "instru" class = "infoOculto">
+            <p>Juego "El Otro Vuelo" este consisten en intentar cumplir un determinado tiempo volando.
+                Usted como judador debera evitar que las balas lo golpen haciendo que pierda vidas. Si pierde las 3 vidas
+                perdera. Así también debera intentar cargar el combustible los cuales aparecen aleatoriamente ya que si la barra de
+                energia se vacia usted perdera. De distinto modo si va agarrando combustible la barra se ira llenando o manteniendo
+                en su nivel.
+                Los controles seran las flechas que se hayan en el teclado, siendo subir lo que permite que nuestro personaje
+                ascienda, bajar, haciendo que la aeronave descienda. Asi mismo podremos avanzar hacia adelante con la flecha
+                derecha y retroceder con la flecha izquierda.
+            </p>
+            <button type = "button" class = "volver">VOLVER</button>
+        </div>
+        <div id = "paisaje" class = "paisaje"></div>
+        <div id = "vida" class = "vidasTotal"></div>
+        <div id = "personaje" class = "mover personaje"></div>
+        <div id = "piso" class = "piso"></div>
+        <div id = "energia" class = "energiaLlena"></div>
+    </div>
+    <div id = "juegoTerminado" class = "terminado">
+        <h1 class = "game">GAME OVER</h1>
+        <button id = "reiniciar" class = "reiniciar">RESET</button>
+        <img src = "/Imagenes/avion/avion_perdio.png" class = "avion_msj" alt = "Avion Juego">
+    </div>
+    <div id = "contador">
+        <div class = "tiempo"> Tiempo : <span id = "tiempo"> 60</span></div>
+    </div>
+    <div id = "juegoFinalizado" class = "final">
+        <h1 class = "game">¡FELICIDADES, GANASTE!</h1>
+        <button id = "reiniciar1" class = "reiniciar">RESET</button>
+        <img src = "/Imagenes/avion/avion.png" class = "avionmsj" alt = "Avion Juego">
+    </div>
+    <script src = "Personaje.js"></script>
+    <script src = "Mover.js"></script>
+    <script src = "Enemigo.js"></script>
+    <script src = "Energia.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>

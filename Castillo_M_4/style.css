@@ -1,0 +1,425 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 0;
+    height: 100%;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+}
+
+.empezar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 437px;
+    width: 1280px;
+    margin-left: 90px;
+    margin-top: 90px;
+    background: url('Imagenes/mon_2.png') no-repeat;
+    border: 5px solid black;
+    z-index: 10;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 437px;
+    width: 1280px;
+    margin-left: 90px;
+    margin-top: 90px;
+    background-color: white; 
+    border: 5px solid black;
+    z-index: 10;
+}
+
+.info .volver{
+    width: 500px;
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 30%;
+    background-color: aquamarine;
+}
+
+p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoOculto{
+    display: none;
+}
+
+.menuOculto{
+    display: none;
+}
+
+#menu .titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-left: 26%;
+}
+
+#menu .jugar, .instrucciones{
+    width: 500px;
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 30%;
+    background-color: aquamarine;
+}
+
+
+#piso, #paisaje{
+    height: 100vh;
+}
+
+#piso{
+    position: absolute;
+    background: url('Imagenes/pisoo.png') repeat-x;
+    width: 1536px;
+    height: 100px;
+    margin-bottom: 0%;
+    background-size: 600px 100%;
+    padding: 0;
+    bottom: 0;
+    background-position: bottom;
+}
+
+.piso{
+    animation: piso 2s linear infinite;
+}
+
+.pisoPausado{
+    animation-play-state: paused;
+}
+
+#paisaje{
+    background: url('Imagenes/mon_2.png');
+    margin: 0%;
+    border: 0%;
+    width: 1536px;
+    height: 650px;
+    background-position: top;
+    background-size: 1580px 100%;  
+}
+
+.paisaje{
+    animation: floor 20s linear infinite;  
+}
+
+.paisajePausado{
+    animation-play-state: paused;
+}
+
+.personaje{
+    width: 200px;
+    height: 136px;
+    z-index: 1;
+    position: absolute;
+    bottom: 13%;
+    left: 100px;
+    background: url("Imagenes/avion/avion.png");
+}
+
+.personajePerdio{
+    width: 200px;
+    height: 136px;
+    z-index: 1;
+    position: absolute;
+    bottom: 13%;
+    left: 100px;
+    background: url("Imagenes/avion/avion_perdio.png");
+}
+
+.energiaLlena{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaLlena.png")  no-repeat;
+}
+
+.mediaLlena{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaMediaLlena.png")  no-repeat;
+}
+
+.energiaLlena{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaLlena.png")  no-repeat;
+}
+
+.energiaMedia{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaMedia.png") no-repeat;
+}
+
+.casiVacia{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaCasiVacia.png")  no-repeat;
+}
+
+.vacia{
+    width: 150px;
+    height: 57px;
+    z-index: 1;
+    position: absolute;
+    bottom: 91%;
+    margin-left: 35%;
+    background: url("Imagenes/energiaVacia.png")  no-repeat;
+}
+
+.enemigo{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 42px;
+    background: url('Imagenes/avion/enemigo2.png');
+    background-size: cover;
+}
+
+.enemigoAnimacion{
+    display: block;
+    animation: movimiento 5s linear;
+}
+
+.energia{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 42px;
+    background: url('Imagenes/combustible.png');
+    background-size: cover;
+}
+
+.energiaAnimacion{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 39px;
+    background: url('Imagenes/combustible.png');
+    background-size: cover;
+    animation: movimiento 5s linear;
+}
+
+.enemigoPausado{
+    animation-play-state: paused;
+}
+
+.energiaPausado{
+    animation-play-state: paused;
+}
+
+.vidas{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;   
+    background: url('Imagenes/vidaTotal.png') no-repeat;
+    height: 30px;
+    width: 100px;
+    bottom: 650px;
+    left: 20px;
+}
+
+.vidasTotal{
+    position: absolute;
+    z-index: 1;
+    background-size: cover;   
+    background: url('Imagenes/vidaTotal.png') no-repeat;
+    height: 30px;
+    width: 100px;
+    bottom: 650px;
+    left: 20px;
+}
+
+.vidasMenosUno{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;   
+    background: url('Imagenes/vida_menos_uno.png') no-repeat;
+    height: 30px;
+    width: 100px;
+    bottom: 650px;
+    left: 20px;
+}
+
+
+.vidasMenosDos{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;   
+    background: url('Imagenes/vida_menos_dos.png') no-repeat;
+    height: 30px;
+    width: 100px;
+    bottom: 650px;
+    left: 20px;
+}
+
+.sinVidas{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-size: cover;   
+    background: url('Imagenes/sinVida.png') no-repeat;
+    height: 30px;
+    width: 100px;
+    bottom: 650px;
+    left: 20px;
+}
+
+@keyframes movimiento {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -10%
+    }
+}
+
+@keyframes floor{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -1580px;
+    }
+}
+
+
+@keyframes piso{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -600px 0;
+    }
+}
+
+.terminado{
+    display: none;
+}
+
+.terminadoOculto{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 10%;
+    border: 2px solid white;
+    background-color: black;
+    justify-content: center;
+    z-index: 1;
+}
+
+.terminadoOculto .avion_msj{
+    height: 70px;
+    width: 90px;
+    margin-top: 50px;
+    margin-left: 380px;
+}
+
+.terminadoOculto .reiniciar{
+    height: 50px;
+    width: 150px;
+    margin-left: 350px;
+}
+
+.terminadoOculto .game{
+    margin-left: 270px;
+    font-size: 50px;
+}
+
+#contador{
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0%;
+    margin-left: 80%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.tiempo{
+    margin-left: 20%;
+}
+
+.final{
+    display: none;
+}
+
+.finalOcultado{
+    color: white;
+    flex-direction: column;
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 10%;
+    border: 2px solid white;
+    background-color: black;
+    justify-content: center;
+    z-index: 1;
+}
+
+.finalOcultado .avionmsj{
+    height: 70px;
+    width: 90px;
+    margin-top: 50px;
+    margin-left: 380px;
+}
+
+.finalOcultado .reiniciar{
+    height: 50px;
+    width: 150px;
+    margin-left: 350px;
+}
+
+.finalOcultado .game{
+    margin-left: 130px;
+    font-size: 50px;
+}
